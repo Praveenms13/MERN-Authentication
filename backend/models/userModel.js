@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import bcrypt from "bcryptjs";
 
 const userSchema = mongoose.Schema(
   {
@@ -20,6 +21,22 @@ const userSchema = mongoose.Schema(
     timestamps: true,
   }
 );
-
+// ---------------Start of genToken------------------------
+// .pre before saving the user
+// async function is used because we are using await
+userSchema.pre("save", async function (next) {
+  if (!this.isModified("password")) {
+    next();
+  }
+  const salt = await bcrypt.genSalt(10);
+  this.password = await bcrypt.hash(this.password, salt);
+});
+//---------------End of genToken------------------------
+// ---------------Start of matchPassword------------------------
+// .methods is used to create a method
+userSchema.methods.matchPassword = async function (enteredPassword) {
+  return await bcrypt.compare(enteredPassword, this.password);
+};
+//---------------End of matchPassword------------------------
 const User = mongoose.model("User", userSchema);
 export default User;
