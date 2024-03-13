@@ -1,90 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MERN API</title>
-</head>
-
-<body>
-    <h1 id="authentication-api">Authentication API</h1>
-    <p>This is an authentication API built with Node.js and Express.</p>
-    <p>It provides registration(signup), authentication(login), and profile management features for users, designed to
-        provide a secure and scalable authentication system for web applications. </p>
-    <p>It follows the MVC (Model-View-Controller) architectural pattern and incorporates various features and
-        technologies for advanced authentication.</p>
-    <p><strong>*NEGLECT FRONTEND FOLDER</strong></p>
-    <h2 id="api-endpoints">API Endpoints</h2>
-    <ul>
-        <li><code>POST /api/users</code>: Register a new user.</li>
-        <li><code>POST /api/users/auth</code>: Authenticate a user.</li>
-        <li><code>POST /api/users/logout</code>: Logout a user.</li>
-        <li><code>GET /api/users/profile</code>: Get user profile information.</li>
-        <li><code>PUT /api/users/profile</code>: Update user profile information.</li>
-        <li><code>GET /</code>: Home route.</li>
-    </ul>
-    <h2 id="functionality">Functionality</h2>
-    <h4 id="the-application-provides-the-following-functionalities-for-user-authentication-">The application provides
-        the following functionalities for user authentication:</h4>
-    <ul>
-        <li>Register: Users can create new accounts by providing the required information.</li>
-        <li>Login: Users can log in to their accounts using their credentials.</li>
-        <li>Logout: Users can log out from their accounts, terminating the current session.</li>
-        <li>Update Profile: Users can update their profile information such as name, email, password, etc.</li>
-        <li>Get User Profile: Users can retrieve their profile information.</li>
-        <li>Home: Users can navigate to the home page.</li>
-    </ul>
-    <h2 id="features">Features</h2>
-    <ul>
-        <li>
-            <p>MongoDB: The project uses MongoDB as the database to store user information securely and the MongoDB API
-                for seamless integration with the database.</p>
-        </li>
-        <li>
-            <p>Custom Routing Models: Custom routing models are implemented to handle different routes and actions.</p>
-        </li>
-        <li>Advanced Authentication: The authentication system incorporates advanced features for secure user
-            authentication.</li>
-        <li>Secure JWT Token: JWT (JSON Web Token) is used for authentication, and the generated tokens are valid for
-            one month.</li>
-        <li>HTTP-only Cookie: The project utilizes HTTP-only cookies for enhanced security and protection against
-            cross-site scripting (XSS), XSRF (Cross-Site Request Forgery), and cookie hijacking.</li>
-        <li>A- synchronous Error Handling: The project utilizes asynchronous error handling techniques to handle errors
-            efficiently and provide meaningful error messages and enhance user experience</li>
-        <li>.env File: The project uses a separate .env file to store sensitive information and ensure security.</li>
-    </ul>
-    <h2 id="integration-with-other-projects">Integration with Other Projects</h2>
-    <ul>
-        <li>This authentication project can be easily integrated with other web applications or projects that require
-            user authentication. By incorporating the provided authentication functionalities, developers can save time
-            and effort in implementing their own authentication systems.</li>
-    </ul>
-    <h2 id="security-measures">Security Measures</h2>
-    <p>The project is designed with security in mind and includes measures against common security vulnerabilities such
-        as cross-site scripting (XSS), XSRF (Cross-Site Request Forgery), and cookie hijacking. The use of JWT tokens,
-        HTTP-only cookies, and secure error handling techniques helps ensure the security and integrity of user data.
-    </p>
-    <p>Please note that while this project includes security measures, it is essential to regularly update dependencies,
-        follow best practices, and conduct security audits to maintain a robust and secure authentication system.</p>
-    <h2 id="installation-and-setup">Installation and Setup</h2>
-    <p>To set up the project, follow these steps:</p>
-    <ul>
-        <li>Clone the repository to your local machine.</li>
-        <li>Install the required dependencies using npm or yarn: npm install or yarn install.</li>
-        <li>Create a .env file in the root directory and set the necessary environment variables.</li>
-        <li>Start the application: npm start or yarn start.</li>
-        <li>Access the application on the specified port (default is 3000): <a
-                href="http://localhost:3000">http://localhost:3000</a>.</li>
-    </ul>
-    <h2 id="-env-file-looks-like">.ENV File Looks Like</h2>
-    <ul>
-        <li>NODE_ENV=development</li>
-        <li>PORT=6000</li>
-        <li>MONGO_URI=&#39;&#39;</li>
-        <li>JWT_SECRET_KEY=abc123</li>
-    </ul>
-
-</body>
-
-</html>
+Feel free to explore and enjoy the secure authentication provided by this API!
+<h1 id="authentication-api-documentation">Authentication API Documentation</h1>
+<h2 id="overview">Overview</h2>
+<p>Welcome to the Authentication API documentation! This API is crafted with Node.js and Express to provide robust user authentication features for web applications. Following the MVC (Model-View-Controller) pattern, it ensures a secure and scalable authentication system.</p>
+<h3 id="features">Features</h3>
+<ul>
+<li><strong>User Registration</strong>: Create a new account with ease.</li>
+<li><strong>User Authentication</strong>: Log in securely with your credentials.</li>
+<li><strong>Logout</strong>: Terminate your current session effortlessly.</li>
+<li><strong>Profile Management</strong>: Update and retrieve user profile information effortlessly.</li>
+<li><strong>Home Route</strong>: Quickly navigate to the home page.</li>
+</ul>
+<h3 id="api-endpoints">API Endpoints</h3>
+<ul>
+<li><code>POST /api/users</code>: Register a new user.</li>
+<li><code>POST /api/users/auth</code>: Authenticate a user.</li>
+<li><code>POST /api/users/logout</code>: Logout a user.</li>
+<li><code>GET /api/users/profile</code>: Get user profile information.</li>
+<li><code>PUT /api/users/profile</code>: Update user profile information.</li>
+<li><code>GET /</code>: Home route.</li>
+</ul>
+<h3 id="functionality">Functionality</h3>
+<p>This API provides a range of functionalities for user authentication:</p>
+<ul>
+<li><strong>Register</strong>: Users can create new accounts with required information.</li>
+<li><strong>Login</strong>: Securely log in with provided credentials.</li>
+<li><strong>Logout</strong>: Terminate the current session.</li>
+<li><strong>Update Profile</strong>: Modify user profile information.</li>
+<li><strong>Get User Profile</strong>: Retrieve user profile information.</li>
+<li><strong>Home</strong>: Navigate to the home page.</li>
+</ul>
+<h3 id="advanced-features">Advanced Features</h3>
+<ul>
+<li><strong>MongoDB Integration</strong>: Securely store user information using MongoDB.</li>
+<li><strong>Custom Routing Models</strong>: Implemented for handling different routes and actions.</li>
+<li><strong>Secure JWT Token</strong>: Use JWT for authentication with tokens valid for one month.</li>
+<li><strong>HTTP-only Cookie</strong>: Enhance security with HTTP-only cookies, protecting against XSS, XSRF, and cookie hijacking.</li>
+<li><strong>Asynchronous Error Handling</strong>: Efficient error handling for a seamless user experience.</li>
+<li><strong>Environment Variables</strong>: Utilize a separate .env file for storing sensitive information.</li>
+</ul>
+<h3 id="integration-with-other-projects">Integration with Other Projects</h3>
+<p>Easily integrate this authentication project with other web applications or projects requiring user authentication. Save time and effort by incorporating the provided authentication functionalities.</p>
+<h3 id="security-measures">Security Measures</h3>
+<p>Designed with security in mind, this project includes measures against common vulnerabilities such as XSS, XSRF, and cookie hijacking. Utilizing JWT tokens, HTTP-only cookies, and secure error handling ensures the security and integrity of user data.</p>
+<p><strong>Note:</strong> While this project includes security measures, regular updates, best practices, and security audits are essential for maintaining a robust and secure authentication system.</p>
+<h2 id="installation-and-setup">Installation and Setup</h2>
+<p>Follow these steps to set up the project:</p>
+<ol>
+<li>Clone the repository to your local machine.</li>
+<li>Install required dependencies using npm or yarn: <code>npm install</code> or <code>yarn install</code>.</li>
+<li>Create a <code>.env</code> file in the root directory and set necessary environment variables.</li>
+<li>Start the application: <code>npm start</code> or <code>yarn start</code>.</li>
+<li>Access the application on the specified port (default is 3000): <a href="http://localhost:3000">http://localhost:3000</a>.</li>
+</ol>
+<h3 id="sample-env-file">Sample .env File</h3>
+<pre><code><span class="hljs-attr">NODE_ENV</span>=development
+<span class="hljs-attr">PORT</span>=<span class="hljs-number">6000</span>
+<span class="hljs-attr">MONGO_URI</span>=<span class="hljs-string">''</span>
+<span class="hljs-attr">JWT_SECRET_KEY</span>=abc123
+</code></pre><p>Feel free to explore and enjoy the secure authentication provided by this API!</p>
